@@ -1,0 +1,65 @@
+<div class="container">
+  <!-- Button trigger modal -->
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    [routerLink]="['/details']"
+  >
+    Add Customer
+  </button>
+  <br /><br />
+
+  <input
+    type="text"
+    class="form-group form-control search"
+    placeholder="Search Customer"
+    [(ngModel)]="searchTerm"
+  />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Customer ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Amount Paid</th>
+        <th scope="col">Insurance Type</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Customer of CustomerData | filter : searchTerm">
+        <th scope="row">{{ Customer.CustID }}</th>
+        <td>{{ Customer.firstName }}</td>
+        <td>{{ Customer.lastName }}</td>
+        <td>{{ Customer.email }}</td>
+        <td>{{ Customer.phone }}</td>
+        <td>{{ Customer.amount | currency }}</td>
+        <td>{{ Customer.type }}</td>
+        <td>
+          <button
+            class="btn btn-success"
+            type="button"
+            data-toggle="modal"
+            [routerLink]="['/details']"
+            (click)="updateCustomerDetails(Customer)"
+          >
+            Edit
+          </button>
+        </td>
+        <td>
+          <button
+            class="btn btn-danger"
+            (click)="deleteCustomerDetails(Customer.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,146 @@
+<!-- Angular material form with, Name, Id number, insurance type, email , phone
+number , address -->
+
+<!-- ====================================================================-->
+<!-- ====================================================================-->
+<!-- Modal  -->
+<!-- ====================================================================-->
+<!-- ====================================================================-->
+<!-- Modal trigger -->
+<!-- <div
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+> -->
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="formValue">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Customer ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="ID"
+            aria-describedby="emailHelp"
+            placeholder="Enter Customer ID"
+            formControlName="CustID"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            aria-describedby="emailHelp"
+            placeholder="Enter First Name"
+            formControlName="firstName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            aria-describedby="emailHelp"
+            placeholder="Enter Last Name"
+            formControlName="lastName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter Email"
+            formControlName="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter Phone"
+            formControlName="phone"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Amount Paid</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter Amount"
+            formControlName="amount"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Insurance Type</label>
+          <!-- <select
+            name=""
+            id=""
+            formControlName="insuranceType"
+            class="form-control"
+          >
+            <option value="">Select Insurance Type</option>
+            <option value="1">Life Insurance</option>
+            <option value="2">Health Insurance</option>
+            <option value="3">Car Insurance</option>
+            <option value="4">Home Insurance</option>
+          </select> -->
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter Insurance Type"
+            formControlName="type"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        Close
+      </button>
+      <button
+        *ngIf="!showUpdate"
+        type="button"
+        class="btn btn-primary"
+        (click)="postCustomerDetails()"
+      >
+        Add
+      </button>
+      <button
+        *ngIf="showUpdate"
+        type="button"
+        class="btn btn-success"
+        (click)="updateCustomer()"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+<br /><br />

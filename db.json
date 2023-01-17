@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": 5,
+      "CustID": "1000",
+      "firstName": "Mbogo",
+      "lastName": "Mbote",
+      "email": "mbote@gmail.com",
+      "phone": "53467789",
+      "amount": "8500",
+      "type": "Car Insurance"
+    },
+    {
+      "id": 6,
+      "CustID": "31730",
+      "firstName": "Joseph ",
+      "lastName": "Mbote",
+      "email": "mbotejoseph001@gmail.com",
+      "phone": "0792622515",
+      "amount": "20000",
+      "type": "Car Insurance"
+    },
+    {
+      "id": 7,
+      "CustID": "3000",
+      "firstName": "Agnes",
+      "lastName": "Minoo",
+      "email": "aggie@gmail.com",
+      "phone": "546789",
+      "amount": "4500",
+      "type": "Health Insurance"
+    },
+    {
+      "id": 8,
+      "CustID": "4500",
+      "firstName": "Juma",
+      "lastName": "Ali Kiwaka",
+      "email": "juma@gmail.com",
+      "phone": "5677898",
+      "amount": "8500",
+      "type": "Personal Insurance"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
